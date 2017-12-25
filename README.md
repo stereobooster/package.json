@@ -49,12 +49,12 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
 - [TypeScript](#typescript)
   * [`types`](#types)
 - [Package bundlers](#package-bundlers)
-  * [`module`](#module)
+  * [💖 `module`](#%F0%9F%92%96-module)
   * [`browser`](#browser)
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
 - [browserslist](#browserslist)
-  * [`browserslist`](#browserslist)
+  * [💖 `browserslist`](#%F0%9F%92%96-browserslist)
 - [babel](#babel)
   * [`babel`](#babel)
 - [eslint](#eslint)
@@ -566,7 +566,7 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 
 ## Package bundlers
 
-### `module`
+### 💖 `module`
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
@@ -590,7 +590,7 @@ See this [issue](https://github.com/webpack/webpack/issues/4674)
 
 ## browserslist
 
-### `browserslist`
+### 💖 `browserslist`
 
 Library to share target browsers between different front-end tools.
 It is used in:
