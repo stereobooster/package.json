@@ -58,6 +58,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`babel`](#babel)
 - [eslint](#eslint)
   * [`eslintConfig`](#eslintconfig)
+- [jest](#jest)
+  * [`jest`](#jest)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
@@ -605,6 +607,21 @@ See this [issue](https://github.com/babel/babel-preset-env/issues/149).
 ## eslint
 
 ### `eslintConfig`
+
+## jest
+
+### `jest`
+
+```json
+{
+  "jest": {
+    "verbose": true
+  }
+}
+
+```
+
+Source: [jest docs](https://jest-bot.github.io/jest/docs/configuration.html)
 
 ## Other
 
