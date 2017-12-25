@@ -560,9 +560,7 @@ See this [issue](https://github.com/webpack/webpack/issues/4674)
 
 **DEPRECATED**
 
-`jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations.
-
-Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
+`jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations. Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 
 ## browserslist
 
