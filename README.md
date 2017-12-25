@@ -45,11 +45,14 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [browse
 - [Yarn](#yarn)
   * [`flat`](#flat)
   * [`resolutions`](#resolutions)
+- [TypeScript](#typescript)
+  * [`types`](#types)
 - [Non standard](#non-standard)
   * [`module`](#module)
+  * [`browser`](#browser)
+  * [`module-browser`](#module-browser)
   * [`preferGlobal`](#preferglobal)
   * [`jsnext:main`](#jsnextmain)
-  * [`browser`](#browser)
   * [`style`](#style)
 
 <!-- tocstop -->
@@ -501,11 +504,45 @@ Allows you to override a version of a particular nested dependency. See [the Sel
 
 Note that installing dependencies via [`yarn install --flat`] will automatically add a `resolutions` block to your `package.json` file.
 
+## TypeScript
+
+### `types`
+
+If your package has a main `.js` file, you will need to indicate the main declaration file in your `package.json` file as well. Set the `types` property to point to your bundled declaration file. For example:
+
+```json
+{
+    "name": "awesome",
+    "author": "Vandelay Industries",
+    "version": "1.0.0",
+    "main": "./lib/main.js",
+    "types": "./lib/main.d.ts"
+}
+```
+
+Note that the `typings` field is synonymous with `types`, and could be used as well.
+
+Also note that if your main declaration file is named `index.d.ts` and lives at the root of the package (next to `index.js`) you do not need to mark the `types` property, though it is advisable to do so.
+
+Source: [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
+
 ## Non standard
 
 ### `module`
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
+
+Supported by: rollup, webpack
+
+### `browser`
+
+The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
+
+Supported by: webpack
+
+### `module-browser`
+
+See this [issue](https://github.com/webpack/webpack/issues/4674)
 
 ### `preferGlobal`
 
@@ -520,10 +557,6 @@ This option used to trigger an npm warning, but it will no longer warn. It is pu
 `jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations.
 
 Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
-
-### `browser`
-
-The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
 ### `style`
 
