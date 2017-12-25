@@ -4,6 +4,56 @@ Original version of this document copied from [yarnpkg](https://yarnpkg.com/lang
 
 See also [npm documentation](https://docs.npmjs.com/files/package.json), [browsenpm](http://browsenpm.org/package.json), [package-json-validator](http://package-json-validator.com/).
 
+<!-- toc -->
+
+- [Essentials](#essentials)
+  * [`name`](#name)
+  * [`version`](#version)
+- [Info](#info)
+  * [`description`](#description)
+  * [`keywords`](#keywords)
+  * [`license`](#license)
+- [Links](#links)
+  * [`homepage`](#homepage)
+  * [`bugs`](#bugs)
+  * [`repository`](#repository)
+- [Maintainers](#maintainers)
+  * [`author`](#author)
+  * [`contributors`](#contributors)
+- [Files](#files)
+  * [`files`](#files)
+  * [`main`](#main)
+  * [`bin`](#bin)
+  * [`man`](#man)
+  * [`directories`](#directories)
+- [Tasks](#tasks)
+  * [`scripts`](#scripts)
+  * [`config`](#config)
+- [Dependencies](#dependencies)
+  * [`dependencies`](#dependencies)
+  * [`devDependencies`](#devdependencies)
+  * [`peerDependencies`](#peerdependencies)
+  * [`optionalDependencies`](#optionaldependencies)
+  * [`bundledDependencies`](#bundleddependencies)
+- [System](#system)
+  * [`engines`](#engines)
+  * [`os`](#os)
+  * [`cpu`](#cpu)
+- [Publishing](#publishing)
+  * [`private`](#private)
+  * [`publishConfig`](#publishconfig)
+- [Yarn](#yarn)
+  * [`flat`](#flat)
+  * [`resolutions`](#resolutions)
+- [Non standard](#non-standard)
+  * [`module`](#module)
+  * [`preferGlobal`](#preferglobal)
+  * [`jsnext:main`](#jsnextmain)
+  * [`browser`](#browser)
+  * [`style`](#style)
+
+<!-- tocstop -->
+
 ## Essentials
 
 The two most important fields in your `package.json` are `name` and `version`,
@@ -59,7 +109,7 @@ https://registry.npmjs.org/[name]/-/[name]-[version].tgz
 ```
 The current version of your package.
 
-## Info 
+## Info
 
 ### `description`
 
@@ -81,7 +131,7 @@ The description is just a string that helps people understand the purpose of the
 
 Keywords are an array of strings that are useful when searching for packages in a package manager.
 
-### `license` 
+### `license`
 
 ```json
 {
@@ -112,11 +162,11 @@ job it's likely best to check with your company before deciding on a license.
 - A `UNLICENSED` string if you do not want to grant others the right to use a
   private or unpublished package under any terms.
 
-## Links 
+## Links
 
 Various links to documentation, places to file issues and where your package code actually lives.
 
-### `homepage` 
+### `homepage`
 
 ```json
 {
@@ -126,7 +176,7 @@ Various links to documentation, places to file issues and where your package cod
 
 The homepage is the URL to the landing page or documentation for your package.
 
-### `bugs` 
+### `bugs`
 
 ```json
 {
@@ -136,7 +186,7 @@ The homepage is the URL to the landing page or documentation for your package.
 
 The URL to your project's issue tracker. This can also be something like an email address as well. It provides users a way to find out where to send issues with your package.
 
-### `repository` 
+### `repository`
 
 ```json
 {
@@ -150,11 +200,11 @@ The URL to your project's issue tracker. This can also be something like an emai
 
 The repository is the location where the actual code for your package lives.
 
-## Maintainers 
+## Maintainers
 
 The maintainers of your project.
 
-### `author` 
+### `author`
 
 ```json
 {
@@ -165,7 +215,7 @@ The maintainers of your project.
 
 Package author information. An author is one person.
 
-### `contributors` 
+### `contributors`
 
 ```json
 {
@@ -182,11 +232,11 @@ Package author information. An author is one person.
 
 Those that have contributed to your package. Contributors are an array of people.
 
-## Files 
+## Files
 
 You can specify files that will be included in your project, along with the main entry point for your project.
 
-### `files` 
+### `files`
 
 ```json
 {
@@ -200,7 +250,7 @@ You can specify files that will be included in your project, along with the main
 
 These are files that are included in your project. You can specify single files, whole directories or use wildcards to include files that meet a certain criteria.
 
-### `main` 
+### `main`
 
 ```json
 {
@@ -251,7 +301,7 @@ If you have man pages associated with your project, add them here.
 
 When installing your package, you can specify exact locations to put binary files, man pages, documentation, examples, etc.
 
-## Tasks 
+## Tasks
 
 Your package can include runnable scripts or other configuration.
 
@@ -277,7 +327,7 @@ The `start` script value defaults to `node server.js`.
 >
 > -- [npm docs](https://docs.npmjs.com/files/package.json#default-values)
 
-### `config` 
+### `config`
 
 ```json
 {
@@ -293,7 +343,7 @@ Configuration options or parameters used in your scripts.
 
 Your package will very likely depend on other packages. You can specify those dependencies in your `package.json` file.
 
-### `dependencies` 
+### `dependencies`
 
 ```json
 {
@@ -384,7 +434,7 @@ The engines specify versions of clients that must be used with your package. Thi
 
 This specifies operating system compatibility for your package. It checks against `process.platform`.
 
-### `cpu` 
+### `cpu`
 
 ```json
 {
@@ -453,17 +503,17 @@ Note that installing dependencies via [`yarn install --flat`] will automatically
 
 ## Non standard
 
-### module
+### `module`
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
-### preferGlobal
+### `preferGlobal`
 
 **DEPRECATED**
 
 This option used to trigger an npm warning, but it will no longer warn. It is purely there for informational purposes. It is now recommended that you install any binaries as local devDependencies wherever possible.
 
-### jsnext:main
+### `jsnext:main`
 
 **DEPRECATED**
 
@@ -471,10 +521,10 @@ This option used to trigger an npm warning, but it will no longer warn. It is pu
 
 Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 
-### browser
+### `browser`
 
 The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
-### style
+### `style`
 
 The `style` attribute in `package.json` is useful for importing CSS packages. Proposal is [here](https://jaketrent.com/post/package-json-style-attribute/).
