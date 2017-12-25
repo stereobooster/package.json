@@ -624,6 +624,8 @@ when you add the following to `package.json`:
 
 Source: [browserslist](https://github.com/ai/browserslist).
 
+See also: [Create React App Support](https://github.com/facebookincubator/create-react-app/issues/892).
+
 ## babel
 
 ### `babel`
