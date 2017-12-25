@@ -2,7 +2,7 @@
 
 Original version of this document copied from [yarnpkg](https://yarnpkg.com/lang/en/docs/package-json/).
 
-See also [npm documentation](https://docs.npmjs.com/files/package.json), [browsenpm](http://browsenpm.org/package.json), [package-json-validator](http://package-json-validator.com/).
+See also [npm documentation](https://docs.npmjs.com/files/package.json), [package-json-validator](http://package-json-validator.com/).
 
 <!-- toc -->
 
@@ -54,6 +54,11 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [browse
   * [`preferGlobal`](#preferglobal)
   * [`jsnext:main`](#jsnextmain)
   * [`style`](#style)
+- [nodejitsu](#nodejitsu)
+  * [`subdomain`](#subdomain)
+  * [`domains`](#domains)
+  * [`env`](#env)
+  * [`analyze`](#analyze)
 
 <!-- tocstop -->
 
@@ -563,3 +568,24 @@ Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 ### `style`
 
 The `style` attribute in `package.json` is useful for importing CSS packages. Proposal is [here](https://jaketrent.com/post/package-json-style-attribute/).
+
+## nodejitsu
+
+Source: [nodejitsu documentation](https://www.nodejitsu.com/documentation/appendix/package-json/#nodejitsu-specific-package-json-properties)
+
+### `subdomain`
+
+Specify the subdomain for your hosted app's Nodejitsu URL (for example, subdomain.nodejitsu.com.
+
+### `domains`
+
+A list of custom domains for your hosted app.
+
+### `env`
+
+Specify environment variables for your app (for example, `NODE_ENV="production"` is set by default).
+
+### `analyze`
+
+Set this to "false" to force jitsu to not analyze for the app's dependencies.
+
