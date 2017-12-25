@@ -640,3 +640,6 @@ This option used to trigger an npm warning, but it will no longer warn. It is pu
 ### `style`
 
 The `style` attribute in `package.json` is useful for importing CSS packages. Proposal is [here](https://jaketrent.com/post/package-json-style-attribute/).
+
+See also: [istf-spec](https://github.com/cssinjs/istf-spec).
+
