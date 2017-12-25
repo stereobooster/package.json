@@ -537,6 +537,8 @@ Also note that if your main declaration file is named `index.d.ts` and lives at 
 
 Source: [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
 
+Note: in Flow they use [different approach](https://medium.com/netscape/shipping-flowtype-definitions-in-npm-packages-c987917efb65)
+
 ## Package bundlers
 
 ### `module`
