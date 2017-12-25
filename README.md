@@ -519,9 +519,6 @@ If your package has a main `.js` file, you will need to indicate the main declar
 
 ```json
 {
-    "name": "awesome",
-    "author": "Vandelay Industries",
-    "version": "1.0.0",
     "main": "./lib/main.js",
     "types": "./lib/main.d.ts"
 }
