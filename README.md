@@ -47,12 +47,17 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`resolutions`](#resolutions)
 - [TypeScript](#typescript)
   * [`types`](#types)
-- [Non standard](#non-standard)
+- [Package bundlers](#package-bundlers)
   * [`module`](#module)
   * [`browser`](#browser)
   * [`module-browser`](#module-browser)
-  * [`preferGlobal`](#preferglobal)
   * [`jsnext:main`](#jsnextmain)
+- [babel](#babel)
+  * [`babel`](#babel)
+- [eslint](#eslint)
+  * [`eslintConfig`](#eslintconfig)
+- [Other](#other)
+  * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
 - [nodejitsu](#nodejitsu)
   * [`subdomain`](#subdomain)
@@ -530,7 +535,7 @@ Also note that if your main declaration file is named `index.d.ts` and lives at 
 
 Source: [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
 
-## Non standard
+## Package bundlers
 
 ### `module`
 
@@ -548,12 +553,6 @@ Supported by: webpack
 
 See this [issue](https://github.com/webpack/webpack/issues/4674)
 
-### `preferGlobal`
-
-**DEPRECATED**
-
-This option used to trigger an npm warning, but it will no longer warn. It is purely there for informational purposes. It is now recommended that you install any binaries as local devDependencies wherever possible.
-
 ### `jsnext:main`
 
 **DEPRECATED**
@@ -561,6 +560,22 @@ This option used to trigger an npm warning, but it will no longer warn. It is pu
 `jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations.
 
 Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
+
+## babel
+
+### `babel`
+
+## eslint
+
+### `eslintConfig`
+
+## Other
+
+### `preferGlobal`
+
+**DEPRECATED**
+
+This option used to trigger an npm warning, but it will no longer warn. It is purely there for informational purposes. It is now recommended that you install any binaries as local devDependencies wherever possible.
 
 ### `style`
 
