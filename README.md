@@ -54,6 +54,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [browse
   * [`preferGlobal`](#preferglobal)
   * [`jsnext:main`](#jsnextmain)
   * [`style`](#style)
+- [Create React App](#create-react-app)
+  * [`homepage`](#homepage-1)
 
 <!-- tocstop -->
 
@@ -561,3 +563,19 @@ Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 ### `style`
 
 The `style` attribute in `package.json` is useful for importing CSS packages. Proposal is [here](https://jaketrent.com/post/package-json-style-attribute/).
+
+## Create React App
+
+### `homepage`
+
+By default, Create React App produces a build assuming your app is hosted at the server root.
+To override this, specify the `homepage` in your `package.json`, for example:
+
+```json
+"homepage": "http://mywebsite.com/relativepath",
+```
+
+This will let Create React App correctly infer the root path to use in the generated HTML file.
+
+Source: [CRA template/README](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
+
