@@ -60,6 +60,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`eslintConfig`](#eslintconfig)
 - [jest](#jest)
   * [`jest`](#jest)
+- [stylelint](#stylelint)
+  * [`stylelint`](#stylelint)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
@@ -622,6 +624,12 @@ See this [issue](https://github.com/babel/babel-preset-env/issues/149).
 ```
 
 Source: [jest docs](https://jest-bot.github.io/jest/docs/configuration.html)
+
+## stylelint
+
+### `stylelint`
+
+See: [New configuration loader](https://github.com/stylelint/stylelint/issues/490)
 
 ## Other
 
