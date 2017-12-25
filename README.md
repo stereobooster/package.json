@@ -594,6 +594,8 @@ when you add the following to `package.json`:
 [postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
 [Autoprefixer]:                              https://github.com/postcss/autoprefixer
 
+Source: [browserslist](https://github.com/ai/browserslist).
+
 ## babel
 
 ### `babel`
