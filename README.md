@@ -52,6 +52,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`browser`](#browser)
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
+- [browserslist](#browserslist)
+  * [`browserslist`](#browserslist)
 - [babel](#babel)
   * [`babel`](#babel)
 - [eslint](#eslint)
@@ -561,9 +563,45 @@ See this [issue](https://github.com/webpack/webpack/issues/4674)
 
 Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 
+## browserslist
+
+### `browserslist`
+
+Library to share target browsers between different front-end tools.
+It is used in:
+
+* [Autoprefixer]
+* [babel-preset-env]
+  (external config in `package.json` or `browserslist` files supported in 2.0)
+* [postcss-preset-env]
+* [eslint-plugin-compat]
+* [stylelint-no-unsupported-browser-features]
+* [postcss-normalize]
+
+All tools that rely on Browserslist will find its config automatically,
+when you add the following to `package.json`:
+
+```json
+{
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
+```
+
+[stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
+[eslint-plugin-compat]:                      https://github.com/amilajack/eslint-plugin-compat
+[postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
+[babel-preset-env]:                          https://github.com/babel/babel/tree/master/packages/babel-preset-env
+[postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
+[Autoprefixer]:                              https://github.com/postcss/autoprefixer
+
 ## babel
 
 ### `babel`
+
+See this [issue](https://github.com/babel/babel-preset-env/issues/149).
 
 ## eslint
 
