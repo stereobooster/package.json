@@ -50,6 +50,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`types`](#types)
 - [Package bundlers](#package-bundlers)
   * [💖 `module`](#%F0%9F%92%96-module)
+  * [`esm`](#esm)
   * [`browser`](#browser)
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
@@ -571,6 +572,16 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
 Supported by: rollup, [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+
+### `esm`
+
+Proposal is here: [adjusted proposal: ES module "esm": true package.json flag](https://github.com/nodejs/node-eps/pull/60)
+
+See also:
+
+- [Module specifiers: what’s new with ES modules?](http://2ality.com/2017/05/es-module-specifiers.html)
+- [mjs extension trade-offs revision](https://github.com/nodejs/node-eps/issues/57)
+- [reify](https://github.com/benjamn/reify)
 
 ### `browser`
 
