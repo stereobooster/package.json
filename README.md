@@ -570,13 +570,13 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
-Supported by: rollup, webpack
+Supported by: rollup, [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
 ### `browser`
 
 The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
-Supported by: webpack
+Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
 ### `module-browser`
 
