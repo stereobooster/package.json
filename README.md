@@ -50,8 +50,10 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`types`](#types)
 - [Package bundlers](#package-bundlers)
   * [💖 `module`](#%F0%9F%92%96-module)
-  * [`esm`](#esm)
   * [`browser`](#browser)
+  * [`esnext`](#esnext)
+  * [`es2015`](#es2015)
+  * [`esm`](#esm)
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
 - [browserslist](#browserslist)
@@ -573,6 +575,39 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 
 Supported by: rollup, [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
+### `browser`
+
+The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
+
+Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+
+### `esnext`
+
+Full proposal is [here](http://2ality.com/2017/04/transpiling-dependencies-babel.html). Short explanation:
+
+- `esnext`: source code using stage 4 features (or older), not transpiled, in ES modules.
+- `main`: points to a CommonJS module (or UMD module) with JavaScript as modern as Node.js can currently handle.
+- Most module use cases should be handleable via esnext.
+- `browser` can be handled via an extended version of `esnext`
+
+```json
+{
+    ···
+    "main": "main.js",
+    "esnext": {
+        "main": "main-esnext.js",
+        "browser": "browser-specific-main-esnext.js"
+    },
+    ···
+}
+```
+
+See also: [Delivering untranspiled source code via npm](http://2ality.com/2017/06/pkg-esnext.html)
+
+### `es2015`
+
+untranspiled ES6 code. Introduced by Angular. Source: [Transpiling dependencies with Babel](http://2ality.com/2017/04/transpiling-dependencies-babel.html)
+
 ### `esm`
 
 Proposal is here: [adjusted proposal: ES module "esm": true package.json flag](https://github.com/nodejs/node-eps/pull/60)
@@ -582,12 +617,6 @@ See also:
 - [Module specifiers: what’s new with ES modules?](http://2ality.com/2017/05/es-module-specifiers.html)
 - [mjs extension trade-offs revision](https://github.com/nodejs/node-eps/issues/57)
 - [reify](https://github.com/benjamn/reify)
-
-### `browser`
-
-The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
-
-Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
 ### `module-browser`
 
