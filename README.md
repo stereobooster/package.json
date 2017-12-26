@@ -593,6 +593,8 @@ Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-ma
 
 See this [issue](https://github.com/webpack/webpack/issues/4674)
 
+Also referred as `moduleBrowser`.
+
 ### `jsnext:main`
 
 **DEPRECATED**
