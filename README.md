@@ -554,8 +554,8 @@ If your package has a main `.js` file, you will need to indicate the main declar
 
 ```json
 {
-    "main": "./lib/main.js",
-    "types": "./lib/main.d.ts"
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts"
 }
 ```
 
@@ -589,18 +589,16 @@ Full proposal is [here](http://2ality.com/2017/04/transpiling-dependencies-babel
 
 - `esnext`: source code using stage 4 features (or older), not transpiled, in ES modules.
 - `main`: points to a CommonJS module (or UMD module) with JavaScript as modern as Node.js can currently handle.
-- Most module use cases should be handleable via esnext.
+- Most `module` use cases should be handleable via `esnext`.
 - `browser` can be handled via an extended version of `esnext`
 
 ```json
 {
-    ···
-    "main": "main.js",
-    "esnext": {
-        "main": "main-esnext.js",
-        "browser": "browser-specific-main-esnext.js"
-    },
-    ···
+  "main": "main.js",
+  "esnext": {
+    "main": "main-esnext.js",
+    "browser": "browser-specific-main-esnext.js"
+  }
 }
 ```
 
