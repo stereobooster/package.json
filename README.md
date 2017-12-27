@@ -68,6 +68,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`jest`](#jest)
 - [stylelint](#stylelint)
   * [`stylelint`](#stylelint)
+- [size-limit](#size-limit)
+  * [`size-limit`](#size-limit)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
@@ -702,6 +704,24 @@ Source: [jest docs](https://jest-bot.github.io/jest/docs/configuration.html)
 ### `stylelint`
 
 See: [New configuration loader](https://github.com/stylelint/stylelint/issues/490)
+
+## size-limit
+
+### `size-limit`
+If you're using this library you can define its config in `package.json`:
+
+```json
+{
+  "size-limit": [
+    {
+      "limit": "9 KB",
+      "path": "index.js"
+    }
+  ]
+}
+```
+
+Source: [size-limit](https://github.com/ai/size-limit)
 
 ## Other
 
