@@ -49,7 +49,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
 - [TypeScript](#typescript)
   * [`types`](#types)
 - [Package bundlers](#package-bundlers)
-  * [💖 `module`](#%F0%9F%92%96-module)
+  * [`module`](#module)
   * [`browser`](#browser)
   * [`esnext`](#esnext)
   * [`es2015`](#es2015)
@@ -57,7 +57,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
 - [browserslist](#browserslist)
-  * [💖 `browserslist`](#%F0%9F%92%96-browserslist)
+  * [`browserslist`](#browserslist)
 - [babel](#babel)
   * [`babel`](#babel)
 - [eslint](#eslint)
@@ -569,7 +569,7 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 
 ## Package bundlers
 
-### 💖 `module`
+### `module`
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
@@ -580,6 +580,8 @@ Supported by: rollup, [webpack](https://webpack.js.org/configuration/resolve/#re
 The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
 Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+
+Support requested: [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver/issues/41)
 
 ### `esnext`
 
@@ -632,9 +634,9 @@ Also referred as `moduleBrowser`.
 
 ## browserslist
 
-### 💖 `browserslist`
+### `browserslist`
 
-Library to share target browsers between different front-end tools.
+💖 Library to share target browsers between different front-end tools.
 It is used in:
 
 * [Autoprefixer]
