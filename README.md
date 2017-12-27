@@ -58,12 +58,12 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`esm`](#esm)
   * [`module-browser`](#module-browser)
   * [`jsnext:main`](#jsnextmain)
+- [webpack](#webpack)
+  * [`sideEffects`](#sideeffects)
 - [browserslist](#browserslist)
   * [`browserslist`](#browserslist)
 - [babel](#babel)
   * [`babel`](#babel)
-- [webpack](#webpack)
-  * [`sideEffects`](#sideeffects)
 - [eslint](#eslint)
   * [`eslintConfig`](#eslintconfig)
 - [jest](#jest)
@@ -638,6 +638,14 @@ Also referred as `moduleBrowser`.
 
 Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 
+## webpack
+
+### `sideEffects`
+
+Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
+
+See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects)
+
 ## browserslist
 
 ### `browserslist`
@@ -681,14 +689,6 @@ See also: [Create React App Support](https://github.com/facebookincubator/create
 ### `babel`
 
 See this [issue](https://github.com/babel/babel-preset-env/issues/149).
-
-## webpack
-
-### `sideEffects`
-
-Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
-
-See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects)
 
 ## eslint
 
