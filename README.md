@@ -62,6 +62,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`browserslist`](#browserslist)
 - [babel](#babel)
   * [`babel`](#babel)
+- [webpack](#webpack)
+  * [`sideEffects`](#sideeffects)
 - [eslint](#eslint)
   * [`eslintConfig`](#eslintconfig)
 - [jest](#jest)
