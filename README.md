@@ -573,7 +573,7 @@ Note: in Flow they use [different approach](https://medium.com/netscape/shipping
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
 
-Supported by: rollup, [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
 ### `browser`
 
