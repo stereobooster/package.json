@@ -579,7 +579,7 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [w
 
 The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
-Supported by: [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
 
 Support requested: [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver/issues/41)
 
@@ -629,6 +629,8 @@ Also referred as `moduleBrowser`.
 **DEPRECATED**
 
 `jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations. Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
+
+Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 
 ## browserslist
 
