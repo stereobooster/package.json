@@ -644,7 +644,7 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 
 Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
 
-See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects)
+See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects), [Proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293).
 
 ## browserslist
 
