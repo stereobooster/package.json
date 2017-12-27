@@ -1,5 +1,7 @@
 # Package.json
 
+**caution** do not use `package.json` for the folder name if you want to clone this project to your machine - it will break `yarn` (`An unexpected error occurred: "EISDIR: illegal operation on a directory, read".`).
+
 Original version of this document copied from [yarnpkg](https://yarnpkg.com/lang/en/docs/package-json/).
 
 See also [npm documentation](https://docs.npmjs.com/files/package.json), [package-json-validator](http://package-json-validator.com/), [cosmiconfig](https://github.com/davidtheclark/cosmiconfig), [rc](https://github.com/dominictarr/rc) (as an opponent approach to cosmiconfig).
