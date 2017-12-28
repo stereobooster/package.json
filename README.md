@@ -79,6 +79,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
   * [`less`](#less)
+- [CommonJS Packages](#commonjs-packages)
+  * [Reserved Properties](#reserved-properties)
 
 <!-- tocstop -->
 
@@ -771,3 +773,14 @@ Same as `style` but for less.
 
 Supported by: [npm-less](https://github.com/Raynos/npm-less).
 
+## CommonJS Packages
+
+### Reserved Properties
+
+The following fields are reserved for future expansion: `build`, `default`, `email`, `external`, `files`, `imports`, `maintainer`, `paths`, `platform`, `require`, `summary`, `test`, `using`, `downloads`, `uid`.
+
+The following fields are reserved for package registries to use at their discretion: `id`, `type`.
+
+All properties beginning with `_` or `$` are also reserved for package registries to use that their discretion.
+
+Source: [CommonJS wiki](http://wiki.commonjs.org/wiki/Packages/1.1#Reserved_Properties)
