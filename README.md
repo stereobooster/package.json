@@ -50,6 +50,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`resolutions`](#resolutions)
 - [TypeScript](#typescript)
   * [`types`](#types)
+- [browserslist](#browserslist)
+  * [`browserslist`](#browserslist)
 - [Package bundlers](#package-bundlers)
   * [`module`](#module)
   * [`browser`](#browser)
@@ -60,8 +62,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`jsnext:main`](#jsnextmain)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
-- [browserslist](#browserslist)
-  * [`browserslist`](#browserslist)
+- [browserify](#browserify)
+  * [`browserify.transform`](#browserifytransform)
 - [babel](#babel)
   * [`babel`](#babel)
 - [eslint](#eslint)
@@ -573,6 +575,44 @@ Source: [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/
 
 Note: in Flow they use [different approach](https://medium.com/netscape/shipping-flowtype-definitions-in-npm-packages-c987917efb65)
 
+## browserslist
+
+### `browserslist`
+
+💖 Library to share target browsers between different front-end tools.
+It is used in:
+
+* [Autoprefixer]
+* [babel-preset-env]
+  (external config in `package.json` or `browserslist` files supported in 2.0)
+* [postcss-preset-env]
+* [eslint-plugin-compat]
+* [stylelint-no-unsupported-browser-features]
+* [postcss-normalize]
+
+All tools that rely on Browserslist will find its config automatically,
+when you add the following to `package.json`:
+
+```json
+{
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
+```
+
+[stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
+[eslint-plugin-compat]:                      https://github.com/amilajack/eslint-plugin-compat
+[postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
+[babel-preset-env]:                          https://github.com/babel/babel/tree/master/packages/babel-preset-env
+[postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
+[Autoprefixer]:                              https://github.com/postcss/autoprefixer
+
+Source: [browserslist](https://github.com/ai/browserslist).
+
+See also: [Create React App Support](https://github.com/facebookincubator/create-react-app/issues/892).
+
 ## Package bundlers
 
 ### `module`
@@ -585,7 +625,7 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [w
 
 The `browser` field is provided by a module author as a hint to javascript bundlers or component tools when packaging modules for client side use. Proposal is [here](https://github.com/defunctzombie/package-browser-field-spec).
 
-Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields)
+Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve), [webpack](https://webpack.js.org/configuration/resolve/#resolve-mainfields), [browserify](https://github.com/browserify/browserify-handbook#browser-field)
 
 Support requested: [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver/issues/41)
 
@@ -646,43 +686,11 @@ Indicates that the package's modules have no side effects (on evaluation) and on
 
 See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
 
-## browserslist
+## browserify
 
-### `browserslist`
+### `browserify.transform`
 
-💖 Library to share target browsers between different front-end tools.
-It is used in:
-
-* [Autoprefixer]
-* [babel-preset-env]
-  (external config in `package.json` or `browserslist` files supported in 2.0)
-* [postcss-preset-env]
-* [eslint-plugin-compat]
-* [stylelint-no-unsupported-browser-features]
-* [postcss-normalize]
-
-All tools that rely on Browserslist will find its config automatically,
-when you add the following to `package.json`:
-
-```json
-{
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
-}
-```
-
-[stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
-[eslint-plugin-compat]:                      https://github.com/amilajack/eslint-plugin-compat
-[postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
-[babel-preset-env]:                          https://github.com/babel/babel/tree/master/packages/babel-preset-env
-[postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
-[Autoprefixer]:                              https://github.com/postcss/autoprefixer
-
-Source: [browserslist](https://github.com/ai/browserslist).
-
-See also: [Create React App Support](https://github.com/facebookincubator/create-react-app/issues/892).
+Documentation is [here](https://github.com/browserify/browserify-handbook#browserifytransform-field)
 
 ## babel
 
