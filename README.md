@@ -48,6 +48,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
 - [Yarn](#yarn)
   * [`flat`](#flat)
   * [`resolutions`](#resolutions)
+- [Lerna + Yarn](#lerna--yarn)
+  * [`workspaces`](#workspaces)
 - [TypeScript](#typescript)
   * [`types`](#types)
 - [browserslist](#browserslist)
@@ -557,6 +559,14 @@ Note that if your `package.json` contains `"flat": true` and other packages depe
 Allows you to override a version of a particular nested dependency. See [the Selective Versions Resolutions RFC](https://github.com/yarnpkg/rfcs/blob/master/implemented/0000-selective-versions-resolutions.md) for the full spec.
 
 Note that installing dependencies via [`yarn install --flat`] will automatically add a `resolutions` block to your `package.json` file.
+
+## Lerna + Yarn
+
+### `workspaces`
+
+If `--use-workspaces` is true then `packages` will be overridden by the value from `package.json/workspaces`.
+
+Source: [--use-workspaces](https://github.com/lerna/lerna#--use-workspaces).
 
 ## TypeScript
 
