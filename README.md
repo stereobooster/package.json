@@ -59,6 +59,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`es2015`](#es2015)
   * [`esm`](#esm)
   * [`module-browser`](#module-browser)
+  * [`modules.root`](#modulesroot)
   * [`jsnext:main`](#jsnextmain)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
@@ -670,6 +671,12 @@ See also:
 See this [issue](https://github.com/webpack/webpack/issues/4674)
 
 Also referred as `moduleBrowser`.
+
+### `modules.root`
+
+Mentioned in [In Defense of .js](https://github.com/dherman/defense-of-dot-js/blob/master/proposal.md).
+
+There is also [`modules.resolver`](https://github.com/dherman/defense-of-dot-js/issues/19).
 
 ### `jsnext:main`
 
