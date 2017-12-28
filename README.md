@@ -77,6 +77,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
+  * [`less`](#less)
 
 <!-- tocstop -->
 
@@ -753,5 +754,13 @@ This option used to trigger an npm warning, but it will no longer warn. It is pu
 
 The `style` attribute in `package.json` is useful for importing CSS packages. Proposal is [here](https://jaketrent.com/post/package-json-style-attribute/).
 
+Supported by: [parcelify](https://github.com/rotundasoftware/parcelify), [npm-less](https://github.com/Raynos/npm-less), [rework-npm](https://github.com/reworkcss/rework-npm), [npm-css](https://github.com/defunctzombie/npm-css#packagejson).
+
 See also: [istf-spec](https://github.com/cssinjs/istf-spec).
+
+### `less`
+
+Same as `style` but for less.
+
+Supported by: [npm-less](https://github.com/Raynos/npm-less).
 
