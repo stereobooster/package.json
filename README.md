@@ -77,6 +77,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`stylelint`](#stylelint)
 - [size-limit](#size-limit)
   * [`size-limit`](#size-limit)
+- [pwmetrics](#pwmetrics)
+  * [`pwmetrics`](#pwmetrics)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
@@ -760,6 +762,29 @@ If you're using this library you can define its config in `package.json`:
 ```
 
 Source: [size-limit](https://github.com/ai/size-limit)
+
+## PWMetrics
+
+### `pwmetrics`
+You cen specify options in `package.json`:
+
+```json
+{
+  "pwmetrics": {
+    "url": "http://example.com/",
+    "expectations": {
+      "ttfcp": {
+        "warn": ">=1500",
+        "error": ">=2000"
+      }
+    }
+  }
+}
+```
+
+All available options are [here](https://github.com/paulirish/pwmetrics#all-available-configuration-options)
+
+Source: [pwmetrics](https://github.com/paulirish/pwmetrics)
 
 ## Other
 
