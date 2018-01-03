@@ -631,6 +631,8 @@ See also: [Create React App Support](https://github.com/facebookincubator/create
 
 ## Package bundlers
 
+See "[Setting up multi-platform npm packages](http://2ality.com/2017/04/setting-up-multi-platform-packages.html#support-by-bundlers)" for an introduction.
+
 ### `module`
 
 `pkg.module` will point to a module that has ES2015 module syntax but otherwise only syntax features that the target environments support. Full description is [here](https://github.com/rollup/rollup/wiki/pkg.module).
