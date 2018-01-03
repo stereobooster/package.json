@@ -65,6 +65,13 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`jsnext:main`](#jsnextmain)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
+- [jspm](#jspm)
+  * [`jspm`](#jspm)
+  * [`ignore`](#ignore)
+  * [`format`](#format)
+  * [`registry`](#registry)
+  * [`shim`](#shim)
+  * [`map`](#map)
 - [browserify](#browserify)
   * [`browserify.transform`](#browserifytransform)
 - [babel](#babel)
@@ -77,7 +84,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`stylelint`](#stylelint)
 - [size-limit](#size-limit)
   * [`size-limit`](#size-limit)
-- [pwmetrics](#pwmetrics)
+- [PWMetrics](#pwmetrics)
   * [`pwmetrics`](#pwmetrics)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
@@ -709,6 +716,116 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
 
 See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
+
+## jspm
+
+### `jspm`
+
+You can write all package properties at the base of the package.json, or if you don't want to change existing properties that you'd like to use specifically for `npm`, you can write your jspm-specific configuration inside the `jspm` property of package.json, and jspm will use these options over the root level configuration options.
+
+For example:
+
+```json
+{
+  "name": "my-package",
+  "jspm": {
+    "main": "jspm-main"
+  }
+}
+```
+
+See [full specification](https://github.com/jspm/registry/wiki/Configuring-Packages-for-jspm#prefixing-configuration).
+
+### `ignore`
+
+If there are certain specific files or folders to ignore, they can be listed in an array.
+
+### `format`
+
+Options are `esm`, `amd`, `cjs` and `global`.
+
+> When loading modules from `npm`, the module format is treated as `cjs` by default and no automatic detection is run. To load modules of another format you will need to override this property manually.
+
+> Module format `esm` (ECMAScript Module) currently isn't used in package.json.
+
+### `registry`
+
+jspm understands dependencies in the context of a registry.
+
+When loading packages from npm, jspm will set the default registry to `npm`, and treat the dependencies accordingly.
+
+When loading packages from GitHub, the dependencies property is ignored without a registry property being present, as jspm has no way of knowing what the dependencies mean for existing GitHub repos.
+
+Setting the registry property also determines how jspm interprets the package. For example, a GitHub package with `registry: "npm"` will, along with getting its dependencies from npm, be interpreted as CommonJS and support features like directory and JSON requires, exactly as if it had been installed from the npm endpoint to begin with.
+
+A package on GitHub with its registry property set to `registry: "jspm"` will have its dependencies treated as jspm-style dependencies.
+
+### `shim`
+
+Packages written as globals need a shim configuration to work properly in a modular environment. To shim a file `some/global.js` within the package, we can write:
+
+```json
+{
+  "shim": {
+    "some/global": {
+      "deps": ["jquery"],
+      "exports": "globalExportName"
+    }
+  }
+}
+```
+
+Both `deps` and `exports` are optional.
+
+`exports` is [detected automatically by the SystemJS loader](https://github.com/systemjs/systemjs/wiki/Module-Format-Support#globals-global) as any globals written by the script. In most cases this detection will work out correctly.
+
+The shortcut form of `"some/global": ["jquery"]` is also supported if there are no `exports`.
+
+### `map`
+
+Map configuration will rewrite internal requires to point to different local or external modules.
+
+Consider a package which includes its own dependency, `dep` located at `third_party/dep`. It could have a require statement internally something like:
+
+```javascript
+  require('dep');
+```
+
+In order to use the local version, we can write:
+
+```json
+{
+  "map": {
+    "dep": "./third_party/dep"
+  }
+}
+```
+
+It can also be useful to reference a package by its own name within submodules:
+
+```json
+{
+  "map": {
+    "thispackage": "."
+  }
+}
+```
+
+We can then have internal requires to `import 'thispackage/module'` resolve correctly.
+
+Map configuration can also reference dependency submodules.
+
+We can also exclude modules entirely by mapping them to the empty module:
+
+```json
+{
+  "map": {
+    "jquery": "@empty"
+  }
+}
+```
+
+The value returned will then be a Module object with no exports.
 
 ## browserify
 
