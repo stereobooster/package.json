@@ -677,7 +677,7 @@ See also: [Delivering untranspiled source code via npm](http://2ality.com/2017/0
 
 ### `es2015`
 
-untranspiled ES6 code. Introduced by Angular. Source: [Transpiling dependencies with Babel](http://2ality.com/2017/04/transpiling-dependencies-babel.html)
+Untranspiled ES6 code. Source: [Angular Package Format (APF) v5.0](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/edit#)
 
 ### `esm`
 
