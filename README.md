@@ -65,6 +65,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`jsnext:main`](#jsnextmain)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
+- [@std/esm](#stdesm)
+  * [`@std/esm`](#stdesm)
 - [jspm](#jspm)
   * [`jspm`](#jspm)
   * [`ignore`](#ignore)
@@ -716,6 +718,14 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
 
 See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
+
+## @std/esm
+
+### `@std/esm`
+
+Developers have strong opinions on just about everything. To accommodate, `@std/esm` allows unlocking extra features with the `"@std/esm"` or `"@std":{"esm":{}}` field in your `package.json`.
+
+Source: [@std/esm Unlockables](https://github.com/standard-things/esm#unlockables)
 
 ## jspm
 
