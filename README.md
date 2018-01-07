@@ -693,7 +693,7 @@ See also:
 
 See this [issue](https://github.com/webpack/webpack/issues/4674)
 
-Also referred as `moduleBrowser`.
+Also referred as `moduleBrowser`, [`jsnext:browser`](https://github.com/rollup/rollup-plugin-node-resolve/issues/60).
 
 ### `modules.root`
 
