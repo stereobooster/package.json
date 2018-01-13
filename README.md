@@ -76,6 +76,9 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`map`](#map)
 - [browserify](#browserify)
   * [`browserify.transform`](#browserifytransform)
+- [Create React App](#create-react-app)
+  * [`proxy`](#proxy)
+  * [`homepage`](#homepage-1)
 - [babel](#babel)
   * [`babel`](#babel)
 - [eslint](#eslint)
@@ -842,6 +845,18 @@ The value returned will then be a Module object with no exports.
 ### `browserify.transform`
 
 Documentation is [here](https://github.com/browserify/browserify-handbook#browserifytransform-field)
+
+## Create React App
+
+### `proxy`
+
+People often serve the front-end React app from the same host and port as their backend implementation.
+
+Source: [Proxying API Requests in Development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
+
+### `homepage`
+
+Source: [Building for Relative Paths](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#building-for-relative-paths)
 
 ## babel
 
