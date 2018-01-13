@@ -91,6 +91,10 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`size-limit`](#size-limit)
 - [PWMetrics](#pwmetrics)
   * [`pwmetrics`](#pwmetrics)
+- [AVA](#ava)
+  * [`ava`](#ava)
+- [nyc](#nyc)
+  * [`nyc`](#nyc)
 - [Other](#other)
   * [`preferGlobal`](#preferglobal)
   * [`style`](#style)
@@ -892,6 +896,7 @@ See: [New configuration loader](https://github.com/stylelint/stylelint/issues/49
 ## size-limit
 
 ### `size-limit`
+
 If you're using this library you can define its config in `package.json`:
 
 ```json
@@ -910,6 +915,7 @@ Source: [size-limit](https://github.com/ai/size-limit)
 ## PWMetrics
 
 ### `pwmetrics`
+
 You cen specify options in `package.json`:
 
 ```json
@@ -929,6 +935,34 @@ You cen specify options in `package.json`:
 All available options are [here](https://github.com/paulirish/pwmetrics#all-available-configuration-options)
 
 Source: [pwmetrics](https://github.com/paulirish/pwmetrics)
+
+## AVA
+
+### `ava`
+
+Example:
+
+```json
+"ava": {
+  "require": [ "@std/esm" ]
+}
+```
+Source: [ava](https://github.com/avajs/ava#configuration)
+
+## nyc
+
+### `nyc`
+
+Example:
+
+```json
+"nyc": {
+  "extension": [".js", ".mjs"],
+  "require": ["@std/esm"]
+}
+```
+
+Source: [nyc](https://github.com/istanbuljs/nyc#use-with-babel-plugin-istanbul-for-babel-support)
 
 ## Other
 
