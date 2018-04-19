@@ -724,7 +724,7 @@ Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
 
 Indicates that the package's modules have no side effects (on evaluation) and only expose exports. This allows tools like webpack to optimize re-exports.
 
-See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/next/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
+See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/master/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
 
 ## @std/esm
 
