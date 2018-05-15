@@ -63,6 +63,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`module-browser`](#module-browser)
   * [`modules.root`](#modulesroot)
   * [`jsnext:main`](#jsnextmain)
+- [metro](#metro)
+  * [`react-native`](#react-native)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
 - [@std/esm](#stdesm)
@@ -717,6 +719,12 @@ There is also [`modules.resolver`](https://github.com/dherman/defense-of-dot-js/
 `jsnext:main` has been superseded by `pkg.module`, which indicates the location of a file with import/export declarations. Original proposal is [here](https://github.com/jsforum/jsforum/issues/5).
 
 Supported by: [rollup](https://github.com/rollup/rollup-plugin-node-resolve).
+
+## metro
+
+### `react-native`
+
+Works similar to [`browser`](#browser), but for react-native specific modules. [Source](https://github.com/facebook/metro/blob/a29d30327365f3f52652f68d53896355021cc693/packages/metro/src/node-haste/Package.js#L45).
 
 ## webpack
 
