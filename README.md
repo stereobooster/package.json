@@ -50,6 +50,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`resolutions`](#resolutions)
 - [Lerna + Yarn](#lerna--yarn)
   * [`workspaces`](#workspaces)
+- [Bolt](#bolt)
+  * [`bolt`](#bolt)
 - [TypeScript](#typescript)
   * [`types`](#types)
 - [browserslist](#browserslist)
@@ -587,6 +589,23 @@ Note that installing dependencies via [`yarn install --flat`] will automatically
 If `--use-workspaces` is true then `packages` will be overridden by the value from `package.json/workspaces`.
 
 Source: [--use-workspaces](https://github.com/lerna/lerna#--use-workspaces).
+
+## Bolt
+
+### `bolt`
+
+See [Configuration](https://github.com/boltpkg/bolt#configuration)
+
+```json
+{
+  "bolt": {
+    "workspaces": [
+      "utils/*",
+      "apps/*"
+    ]
+  }
+}
+```
 
 ## TypeScript
 
