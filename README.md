@@ -52,6 +52,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`workspaces`](#workspaces)
 - [Bolt](#bolt)
   * [`bolt`](#bolt)
+- [unpkg](#unpkg)
+  * [`unpkg`](#unpkg)
 - [TypeScript](#typescript)
   * [`types`](#types)
 - [browserslist](#browserslist)
@@ -606,6 +608,12 @@ See [Configuration](https://github.com/boltpkg/bolt#configuration)
   }
 }
 ```
+
+## unpkg
+
+### `unpkg`
+
+If you omit the file path (i.e. use a "bare" URL), unpkg will serve the file specified by the `unpkg` field in `package.json`, or fall back to `main` ([source](https://github.com/unpkg/unpkg#examples)).
 
 ## TypeScript
 
