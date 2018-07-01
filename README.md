@@ -56,6 +56,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`unpkg`](#unpkg)
 - [TypeScript](#typescript)
   * [`types`](#types)
+- [Flow](#flow)
+  * [`flow:main`](#flowmain)
 - [browserslist](#browserslist)
   * [`browserslist`](#browserslist)
 - [Package bundlers](#package-bundlers)
@@ -635,6 +637,12 @@ Also note that if your main declaration file is named `index.d.ts` and lives at 
 Source: [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
 
 Note: in Flow they use [different approach](https://medium.com/netscape/shipping-flowtype-definitions-in-npm-packages-c987917efb65)
+
+## Flow
+
+### `flow:main`
+
+Not officially supported. Proposal is [here](https://github.com/facebook/flow/pull/6504).
 
 ## browserslist
 
