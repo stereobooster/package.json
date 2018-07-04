@@ -73,6 +73,10 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`react-native`](#react-native)
 - [webpack](#webpack)
   * [`sideEffects`](#sideeffects)
+- [microbundle](#microbundle)
+  * [`source`, `umd:main`](#source-umdmain)
+- [Parcel](#parcel)
+  * [`source`](#source)
 - [@std/esm](#stdesm)
   * [`@std/esm`](#stdesm)
 - [jspm](#jspm)
@@ -771,6 +775,18 @@ Indicates that the package's modules have no side effects (on evaluation) and on
 
 See also: [`sideEffects` example](https://github.com/webpack/webpack/tree/master/examples/side-effects), [proposal for marking functions as pure](https://github.com/rollup/rollup/issues/1293), [eslint-plugin-tree-shaking](https://www.npmjs.com/package/eslint-plugin-tree-shaking).
 
+## microbundle
+
+### `source`, `umd:main`
+
+See [Specifying builds in package.json](https://github.com/developit/microbundle#specifying-builds-in-packagejson).
+
+## Parcel
+
+### `source`
+
+See [parcel-bundler/parcel#1652](https://github.com/parcel-bundler/parcel/issues/1652).
+
 ## @std/esm
 
 ### `@std/esm`
@@ -1046,7 +1062,7 @@ Source: [CommonJS wiki](http://wiki.commonjs.org/wiki/Packages/1.1#Reserved_Prop
 ## Standard JS
 
 ### `standard`
-Standard JS is a javaScript style guide, linter, and formatter, you can add some property to package.json, like `parser`, `ignore`, `globals`, `plugins`.  
+Standard JS is a javaScript style guide, linter, and formatter, you can add some property to package.json, like `parser`, `ignore`, `globals`, `plugins`.
 
 Example:
 
