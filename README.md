@@ -1046,7 +1046,7 @@ Source: [CommonJS wiki](http://wiki.commonjs.org/wiki/Packages/1.1#Reserved_Prop
 ## Standard JS
 
 ### `standard`
-Standard JS is a javaScript style guide, linter, and formatter, you can add some property to package.json, like `parser`, `ignore`, `globals`, `plugins`  
+Standard JS is a javaScript style guide, linter, and formatter, you can add some property to package.json, like `parser`, `ignore`, `globals`, `plugins`.  
 
 Example:
 
