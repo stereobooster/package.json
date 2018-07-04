@@ -109,6 +109,8 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [packag
   * [`less`](#less)
 - [CommonJS Packages](#commonjs-packages)
   * [Reserved Properties](#reserved-properties)
+- [Standard JS](#standard-js)
+  * [`standard`](#standard)
 
 <!-- tocstop -->
 
@@ -1040,3 +1042,24 @@ The following fields are reserved for package registries to use at their discret
 All properties beginning with `_` or `$` are also reserved for package registries to use that their discretion.
 
 Source: [CommonJS wiki](http://wiki.commonjs.org/wiki/Packages/1.1#Reserved_Properties)
+
+## Standard JS
+
+### `standard`
+Standard JS is a javaScript style guide, linter, and formatter, you can add some property to package.json, like `parser`, `ignore`, `globals`, `plugins`.  
+
+Example:
+
+```json
+"standard": {
+  "parser": "babel-eslint",
+  "ignore": [
+    "**/out/",
+    "/lib/select2/",
+    "/lib/ckeditor/",
+    "tmp.js"
+  ]
+}
+```
+
+See also: [Standard JS](https://standardjs.com/)
