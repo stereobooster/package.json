@@ -4,7 +4,7 @@
 
 Original version of this document copied from [yarnpkg](https://yarnpkg.com/lang/en/docs/package-json/).
 
-See also [npm documentation](https://docs.npmjs.com/files/package.json), [package-json-validator](http://package-json-validator.com/), [cosmiconfig](https://github.com/davidtheclark/cosmiconfig), [rc](https://github.com/dominictarr/rc) (as an opponent approach to cosmiconfig).
+See also [npm documentation](https://docs.npmjs.com/files/package.json), [std-pkg](https://github.com/jamiebuilds/std-pkg), [clean-publish](https://github.com/shashkovdanil/clean-publish), [package-json-validator](http://package-json-validator.com/), [cosmiconfig](https://github.com/davidtheclark/cosmiconfig), [rc](https://github.com/dominictarr/rc) (as an opponent approach to cosmiconfig).
 
 <!-- toc -->
 
