@@ -42,6 +42,7 @@ See also [npm documentation](https://docs.npmjs.com/files/package.json), [std-pk
   * [`engines`](#engines)
   * [`os`](#os)
   * [`cpu`](#cpu)
+  * [`libc`](#libc)
 - [Publishing](#publishing)
   * [`private`](#private)
   * [`publishConfig`](#publishconfig)
@@ -533,8 +534,22 @@ This specifies operating system compatibility for your package. It checks agains
   "cpu": ["!arm", "!mips"]
 }
 ```
-
 Use this to specify your package will only run on certain CPU architectures. This checks against `process.arch`.
+
+### `libc`
+
+```json
+{
+  "libc": ["glibc"],
+  "libc": ["musl"]
+}
+```
+
+Use this to specify your package only runs on a specific flavor of libc. This checks against the result from [`detect-libc`](https://www.npmjs.com/package/detect-libc).
+
+- [pnpm support](https://github.com/pnpm/pnpm/pull/4605)
+- [yarn support](https://github.com/yarnpkg/berry/pull/3981)
+- [npm support TBD](https://github.com/npm/rfcs/issues/438)
 
 ## Publishing
 
