@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
+
 # Package.json [![Twitter Follow](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/stereobooster)
 
 **caution** do not use `package.json` for the folder name if you want to clone this project to your machine - it will break `yarn` (`An unexpected error occurred: "EISDIR: illegal operation on a directory, read".`).
